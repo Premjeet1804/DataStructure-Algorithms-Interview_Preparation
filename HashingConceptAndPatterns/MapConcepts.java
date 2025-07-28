@@ -1,5 +1,6 @@
 package HashingConceptAndPatterns;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 
@@ -84,18 +85,18 @@ public class MapConcepts {
 
     }
     //https://www.geeksforgeeks.org/dsa/count-distinct-elements-in-every-window-of-size-k/
-    private static int[] countDistinct(int []arr,int k)
-    {
+    public static  ArrayList<Integer> countDistinct(int arr[], int k) {
+        // code here
         int n = arr.length;
         HashMap<Integer,Integer> map = new HashMap<>();
-        int j=0;
+        ArrayList<Integer> list = new  ArrayList<Integer>();
         for(int i=0;i<k;i++)
         {
             map.put(arr[i],map.getOrDefault(arr[i],0)+1);
         }
-        int []ans = new int[n-k+1];
-        ans[j++] = map.size();
-        for(int i=k;i<n-k;i++)
+
+        list.add(map.size());
+        for(int i=k;i<n;i++)
         {
             int prev = arr[i-k];
             int curr = arr[i];
@@ -103,9 +104,9 @@ public class MapConcepts {
             if(map.get(prev)==0) map.remove(prev);
             map.put(curr, map.getOrDefault(curr,0)+1);
 
-            ans[j++]=map.size();
+            list.add(map.size());
         }
-
-
+        return list;
     }
+
 }
