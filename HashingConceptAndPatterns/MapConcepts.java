@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 
 public class MapConcepts {
+    //When ever u want to store unique keys and their frequency or value also matter use Map
     public static void main(String[] args) {
         int []arr = {1,2,4,3,5,7,6,8,4,56,2,3,5,7,1,4};
         int []queries = {1,2,3,4,56,7,8};

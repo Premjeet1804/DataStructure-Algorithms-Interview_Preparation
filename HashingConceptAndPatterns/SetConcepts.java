@@ -3,6 +3,7 @@ package HashingConceptAndPatterns;
 import java.util.HashSet;
 
 public class SetConcepts {
+    //Whenever u want to store unique elements use Set
     public static void main(String[] args) {
         int []arr = {1,2,4,6,4,2,5,6,4,3,5,9};
         System.out.println(numberOfDistinctEle(arr));
