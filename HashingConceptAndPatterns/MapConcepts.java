@@ -7,10 +7,11 @@ import java.util.HashSet;
 public class MapConcepts {
     //When ever u want to store unique keys and their frequency or value also matter use Map
     public static void main(String[] args) {
-        int []arr = {1,2,4,3,5,7,6,8,4,56,2,3,5,7,1,4};
-        int []queries = {1,2,3,4,56,7,8};
+//        int []arr = {1,2,4,3,5,7,6,8,4,56,2,3,5,7,1,4};
+//        int []queries = {1,2,3,4,56,7,8};
 //        countFreq(arr,queries);
 //        System.out.println(firstNonRepeatingEle(arr));
+
     }
     //Given an array and Q queries for each query return frequency of an element.
     public static void countFreq(int []arr,int []queries)
@@ -94,6 +95,7 @@ public class MapConcepts {
         for(int i=0;i<k;i++)
         {
             map.put(arr[i],map.getOrDefault(arr[i],0)+1);
+
         }
 
         list.add(map.size());
@@ -109,5 +111,7 @@ public class MapConcepts {
         }
         return list;
     }
+
+
 
 }
